@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenlands Group of schools</title>
+</head>
+<body>
+    <header>
+        <h1>Y Televisiion Registration Form</h1>
+        <p>Please fill out this form</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>About This Form</h2>
+            <p>Ystudios choice of programs</p>
+            <ul>
+                <li>Food & Travel</li>
+                <li>News</li>
+                <li>Sports</li>
+                <li>Movies & TV shows</li>
+                <li>Science & Technology</li>
+            </ul>
+            <figure>
+                <video src="./assets/cars.mp4" alt="24 hours of news" controls width="600" height="400" autoplay muted loop>
+                    Your browser does not support the video tag.
+            </figure>
+
+            <article>
+                <h3>Pricing Options</h3>
+                <table
+                border="1"
+                bordercolor="#ccc"
+                cellpadding="10">
+                    <thead>
+                        <tr>
+                            <th>Plan</th>
+                            <th>Features</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lite</td>
+                            <td>Standard channels + Local TV</td>
+                            <td>1000KES/month</td>
+                        </tr>
+                        <tr>
+                            <td>Family</td>
+                            <td>Advanced channels + English Premier League</td>
+                            <td>1800KES/month</td>
+                        </tr>
+                        <tr>
+                            <td>Premium</td>
+                            <td>All features + Download & Watch later</td>
+                            <td>2500KES/month</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <figure>
+                <img src="./assets/tv.jpg" alt="TV"
+                width="400"
+                length="300">
+            </figure>
+        </section>
+
+        <section>
+            <h2>Registration Form</h2>
+            <form id="registrationForm" action="/submit" method="post" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div>
+                        <div>
+                            <label for="firstName" class="required">First Name</label>
+                            <input type="text" id="firstName" name="firstName" 
+                                   placeholder="Enter your first name" 
+                                   required 
+                                   autocomplete="given-name">
+                        </div>
+                        <div>
+                            <label for="lastName" class="required">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" 
+                                   placeholder="Enter your last name" 
+                                   required 
+                                   autocomplete="family-name">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" 
+                               placeholder="your.email@example.com" 
+                               required 
+                               autocomplete="email">
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" 
+                               placeholder="123-456-7890" 
+                               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                               autocomplete="tel">
+                        <small>Format: 123-456-7890</small>
+                    </div>
+
+                    <div>
+                        <label for="birthdate">Date of Birth</label>
+                        <input type="date" id="birthdate" name="birthdate" 
+                               min="1900-01-01" max="2025-12-31">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Details</legend>
+                    
+                    <div>
+                        <label for="username" class="required">Username</label>
+                        <input type="text" id="username" name="username" 
+                               placeholder="Choose a username" 
+                               required 
+                               minlength="4" 
+                               maxlength="20"
+                               autocomplete="username">
+                    </div>
+
+                    <div>
+                        <div>
+                            <label for="password" class="required">Password</label>
+                            <input type="password" id="password" name="password" 
+                                   placeholder="Create a password" 
+                                   required 
+                                   minlength="8"
+                                   autocomplete="new-password">
+                        </div>
+                        <div>
+                            <label for="confirmPassword" class="required">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" 
+                                   placeholder="Confirm your password" 
+                                   required 
+                                   autocomplete="new-password">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+
+                    <div>
+                        <label for="favColor">Favorite Color</label>
+                        <input type="color" id="favColor" name="favColor" 
+                               value="#4CAF50">
+                    </div>
+
+                    <div>
+                        <label for="bio">Biography</label>
+                        <textarea id="bio" name="bio" 
+                                  placeholder="Tell us about yourself..." 
+                                  rows="4"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>Select your country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="AU">Australia</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Preferred Contact Method</label>
+                        <div>
+                            <input type="radio" id="contactEmail" name="contactMethod" value="email" checked>
+                            <label for="contactEmail">Email</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                            <label for="contactPhone">Phone</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="contactMail" name="contactMethod" value="mail">
+                            <label for="contactMail">Postal Mail</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>Interests (select all that apply)</label>
+                        <div>
+                            <input type="checkbox" id="interestTech" name="interests" value="technology">
+                            <label for="interestTech">Technology</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interestSports" name="interests" value="sports">
+                            <label for="interestSports">Sports</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interestMusic" name="interests" value="music">
+                            <label for="interestMusic">Music</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interestTravel" name="interests" value="travel">
+                            <label for="interestTravel">Travel</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="submit">Submit Registration</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ystudios. All rights reserved.</p>
+        <p>Package update</p>
+    </footer>
+
+    <script>
+        document.getElementById('experience').addEventListener('input', function() {
+            document.getElementById('experienceValue').value = this.value;
+        });
+    </script>
+</body>
+</html>
